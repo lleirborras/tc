@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>TC</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="vendor/plugins/rangy/rangy-core.js"></script>
+    <script src="vendor/plugins/rangy/rangy-cssclassapplier.js"></script>
+    <script src="vendor/plugins/rangy/rangy-highlighter.js"></script>
+    <script src="vendor/plugins/rangy/rangy-selectionsaverestore.js"></script>
+    <script src="vendor/plugins/rangy/rangy-serializer.js"></script>
+    <script src="vendor/plugins/rangy/rangy-textrange.js"></script>
+    <link rel="stylesheet" href="index.css?v=1">
+  </head>
+  <body>
+    <img src="title.png" />
+    <hr />
+    <label for="users">Users: </label>
+    <select id="users">
+      <option value="1">User1</option>
+      <option value="2">User2</option>
+      <option value="3">User3</option>
+      <option value="4">User4</option>
+    </select>
+    <div id="traking" data-edit="true"></div>
+
+    <script src="src/tc.js"></script>
+    <script src="src/dom/tc.dom.base.js"></script>
+    <script src="src/dom/tc.dom.element.js"></script>
+    <script src="src/events/tc.events.base.js"></script>
+    <script src="src/events/tc.events.bindings.js"></script>
+    <script src="src/tc.selection.js"></script>
+    <script src="src/tc.changes.js"></script>
+    <script src="src/tc.user.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
