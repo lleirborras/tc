@@ -31,7 +31,10 @@ TC.Changes = (function() {
             }
         } else if(target.is("del")){
 
-            selection.append_node(new_node);
+            if(target.data("user-id") == user_id)
+                selection.insert_node(new_node);
+            else
+                selection.append_node(new_node);
 
         }
     };
@@ -41,15 +44,22 @@ TC.Changes = (function() {
             range     = selection.range(),
             max_pos   = range.text().length;
 
-        range.collapse(true);
+        if(max_pos == 0) {
 
-        if(i==8)
-            range.move("character", max_pos);
-
-        selection.set_single_range(range);
-
-        for(pos=0; pos < max_pos; pos++){
             _remove(i, selection, range);
+
+        } else {
+
+            range.collapse(true);
+
+            if(i==8)
+                range.move("character", max_pos);
+
+            selection.set_single_range(range);
+
+            for(pos=0; pos < max_pos; pos++){
+                _remove(i, selection, range);
+            }
         }
     };
 
